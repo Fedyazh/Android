@@ -134,7 +134,7 @@
     function checkMyData() {
         $('button').prop('disabled', true);
 
-        $.ajax('/checkUserData', {
+        $.ajax('/Android/checkUserData', {
             method: 'POST',
             data: {
                 _auth: initData,
