@@ -97,30 +97,42 @@
             margin: 8px 0;
             box-sizing: border-box;
         }
+
     </style>
 </head>
 <body>
 <section>
-    <button type="button" onclick="checkMyData();">Check My Data</button>
+    <h3>Введите ваше имя</h3>
+    <input id="input-text" type="text" placeholder="Text">
+    <h3> Выберите услугу</h3>
+    <select name="user_profile_color_1">
+        <option value="1">Маникюр</option>
+        <option value="2">Педикюр</option>
+    </select>
+    <h3> Выберите время</h3>
+    <select name="user_profile_color_1">
+        <option value="1">12:00</option>
+        <option value="2">13:00</option>
+    </select>
 
-    <hr>
+<!--    <hr>-->
 
-    <h3>Send Message Function</h3>
-    <form>
-        <label for="input-user-id"></label>
-        <input id="input-user-id" type="text" placeholder="UserID">
+<!--    <h3>Send Message Function</h3>-->
+<!--    <form>-->
+<!--        <label for="input-user-id"></label>-->
+<!--        <input id="input-user-id" type="text" placeholder="UserID">-->
 
-        <label for="input-text"></label>
-        <input id="input-text" type="text" placeholder="Text">
+<!--        <label for="input-text"></label>-->
+<!--        <input id="input-text" type="text" placeholder="Text">-->
 
-        <button type="button" onclick="setMyUserID();">Set my ID</button>
-        <button type="button" onclick="sendMessage();">Send Message</button>
-    </form>
+<!--        <button type="button" onclick="setMyUserID();">Set my ID</button>-->
+<!--        <button type="button" onclick="sendMessage();">Send Message</button>-->
+<!--    </form>-->
 
-    <hr>
+<!--    <hr>-->
 
-    <h4>Output</h4>
-    <pre><code id="div-code-output"></code></pre>
+<!--    <h4>Output</h4>-->
+<!--    <pre><code id="div-code-output"></code></pre>-->
 </section>
 
 
@@ -134,7 +146,7 @@
     function checkMyData() {
         $('button').prop('disabled', true);
 
-        $.ajax('/Android/checkUserData', {
+        $.ajax('/checkUserData', {
             method: 'POST',
             data: {
                 _auth: initData,
@@ -193,6 +205,7 @@
     Telegram.WebApp.MainButton.setText('CLOSE').show().onClick(function () {
         Telegram.WebApp.close();
     });
+
 
 </script>
 </body>
