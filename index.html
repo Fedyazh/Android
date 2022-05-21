@@ -124,6 +124,7 @@
     let initData = Telegram.WebApp.initData || '';
     let initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
     Telegram.WebApp.MainButton.setText('Записаться').show().onClick(function () {
+        Telegram.WebApp.sendData("some string that we need to send"); 
         Telegram.WebApp.close();
     });
 
